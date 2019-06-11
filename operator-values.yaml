@@ -1,0 +1,26 @@
+etcd-operator:
+  backupOperator:
+    nodeSelector:
+      vcmtspktgen: "true"
+  etcdCluster:
+    pod:
+      nodeSelector:
+        vcmtspktgen: "true"
+  etcdOperator:
+    nodeSelector:
+      vcmtspktgen: "true"
+  restoreOperator:
+    nodeSelector:
+      vcmtspktgen: "true"
+prometheus-operator:
+  alertmanager:
+    alertmanagerSpec:
+      nodeSelector:
+        vcmtspktgen: "true"
+  prometheus:
+    prometheusSpec:
+      nodeSelector:
+        vcmtspktgen: "true"
+  prometheusOperator:
+    nodeSelector:
+      vcmtspktgen: "true"
